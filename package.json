@@ -25,7 +25,7 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm run build --filter=@vben/web-antd",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 turbo build --filter=@vben/web-antd",
     "check": "pnpm run check:circular && pnpm run check:dep && pnpm run check:type",
     "check:circular": "vsh check-circular",
     "check:dep": "vsh check-dep",
