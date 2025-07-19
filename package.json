@@ -35,6 +35,7 @@
     "dev": "pnpm -F @vben/web-antd run dev",
     "format": "vsh lint --format",
     "lint": "vsh lint",
+    "postinstall": "pnpm -r run stub --if-present",
     "reinstall": "pnpm clean --del-lock && pnpm install",
     "update:deps": "npx taze -r -w"
   },
