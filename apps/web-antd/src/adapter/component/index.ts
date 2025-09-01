@@ -66,7 +66,7 @@ const TreeSelect = defineAsyncComponent(
   () => import('ant-design-vue/es/tree-select'),
 );
 const Upload = defineAsyncComponent(() => import('ant-design-vue/es/upload'));
-
+const Editor = defineAsyncComponent(() => import('#/components/Editor/'));
 const withDefaultPlaceholder = <T extends Component>(
   component: T,
   type: 'input' | 'select',
@@ -112,6 +112,7 @@ export type ComponentType =
   | 'DatePicker'
   | 'DefaultButton'
   | 'Divider'
+  | 'Editor'
   | 'IconPicker'
   | 'Input'
   | 'InputNumber'
@@ -197,6 +198,7 @@ async function initComponentAdapter() {
     TimePicker,
     TreeSelect: withDefaultPlaceholder(TreeSelect, 'select'),
     Upload,
+    Editor,
   };
 
   // 将组件注册到全局共享状态中
