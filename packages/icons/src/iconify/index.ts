@@ -12,4 +12,6 @@ export const MdiGoogle = createIconifyIcon('mdi:google');
 
 export const MdiQqchat = createIconifyIcon('mdi:qqchat');
 
+export const RiDingding = createIconifyIcon('ri:dingding-fill');
+
 export const SolarPassword = createIconifyIcon('solar:password-bold');
