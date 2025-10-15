@@ -20,14 +20,13 @@ export function useColumns(
       slots: { default: 'title' },
       title: '名称',
       treeNode: true,
-      width: 300,
     },
     {
       align: 'center',
       cellRender: { name: 'CellTag', options: getMenuTypeOptions() },
       field: 'menuType',
       title: '类型',
-      width: 150,
+      width: 200,
     },
     {
       field: 'permission',
@@ -38,7 +37,7 @@ export function useColumns(
       align: 'left',
       field: 'path',
       title: '路径',
-      width: 200,
+      width: 300,
     },
     {
       align: 'center',
