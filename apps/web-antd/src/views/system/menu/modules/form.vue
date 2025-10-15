@@ -50,6 +50,7 @@ const schema: VbenFormSchema[] = [
       },
       getPopupContainer,
       fieldNames: { children: 'children', label: 'title', value: 'id' },
+      allowClear: true,
       showSearch: true,
       treeDefaultExpandAll: true,
       placeholder: '请选择',
@@ -58,13 +59,10 @@ const schema: VbenFormSchema[] = [
         let menuType = 1;
         if (value) {
           const selectedNode = getNodeById(value);
-          if (selectedNode) {
-            const hasChildren =
-              selectedNode.children && selectedNode.children.length > 0;
-            if (!hasChildren) menuType = 2;
+          if (selectedNode && selectedNode.parentId > 0) {
+            menuType = 2;
           }
         }
-
         await formApi.setFieldValue('menuType', menuType);
       },
     },
