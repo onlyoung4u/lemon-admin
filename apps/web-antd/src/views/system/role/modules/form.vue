@@ -44,8 +44,11 @@ const [Drawer, drawerApi] = useVbenDrawer({
         drawerApi.unlock();
       });
   },
-  onOpenChange(isOpen) {
+  async onOpenChange(isOpen) {
     if (isOpen) {
+      if (permissions.value.length === 0) {
+        await loadPermissions();
+      }
       const data = drawerApi.getData<Recordable<any>>();
       formApi.resetForm();
       if (data.id) {
@@ -54,10 +57,6 @@ const [Drawer, drawerApi] = useVbenDrawer({
         formApi.setValues(data);
       } else {
         id.value = undefined;
-      }
-
-      if (permissions.value.length === 0) {
-        loadPermissions();
       }
     }
   },
