@@ -41,7 +41,7 @@
     "@vben/types": "workspace:*",
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
-    "@wangeditor-next/editor": "^5.6.44",
+    "@wangeditor-next/editor": "^5.6.47",
     "@wangeditor-next/editor-for-vue": "^5.1.14",
     "ant-design-vue": "catalog:",
     "dayjs": "catalog:",
